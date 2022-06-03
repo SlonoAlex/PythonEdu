@@ -1,0 +1,25 @@
+#Задание 1
+print(sum(range(0, 88888888)))
+#Задание 2
+a = [3, 4, 56, 100, 2, 2, 3]
+print(sum(a)/len(a))
+#Задание 3 Заменить в строке "asdxfghyxyx" все буквы "х" на "у"
+B = "asdxfghyxyx"
+b_new = ""
+for b in B:
+    if b == "x":
+        b_new += "y"
+    else:
+        b_new += b
+print(b_new)
+#Задание 4
+C = [3, 4, 56, 100, 15, 2, 20, 30]
+c = 1
+for x in C:
+    if x % 3 == 0 and x % 5 == 0:
+        c = x*c
+print(c)
+#Задание 5
+D = "asdxfghyxyx"
+D = D.replace("x", "y")
+print(D)
