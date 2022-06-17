@@ -1,0 +1,44 @@
+x = ['Inception - Christopher Nolan', 'Avatar - James Cameron', 
+'Star Wars - J.J. Abrams', 'Matrix - Larry Wachowski and Andy Wachowski']
+y = {'Inception': 'Christopher Nolan', 'Avatar': 'James Cameron', 'Star Wars': 'J.J. Abrams', 'Matrix': 'Larry Wachowski and Andy Wachowski'}
+z = set(x)
+
+# Изменение объекта
+
+x[3] = 'Matrix - Lana Wachowski and Lilly Wachowski'
+print(x[3])
+y['Inception'] = 'Nolan'
+print(y['Inception'])
+#z[2] = 'Abrams'
+#print(z[2])
+
+# Поиск
+# Список
+check = True
+for i in range(len(x)):
+    if '1' in x[i]:
+        print(x[i])
+        check = True
+        break
+    else:
+        check = False
+if check == False:
+    print('Нет такого')        
+#Словарь
+for i in y:
+    if 'Cameron' in y[i]:
+        print(i)
+        
+        
+check = True
+for i in range(len(z)):
+    if 'Inception' in z[i]:
+        print(z[i])
+        check = True
+        break
+    else:
+        check = False
+if check == False:
+    print('Нет такого')  
+
+    
