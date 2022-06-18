@@ -1,16 +1,18 @@
-x = ['Inception - Christopher Nolan', 'Avatar - James Cameron', 
-'Star Wars - J.J. Abrams', 'Matrix - Larry Wachowski and Andy Wachowski']
+x = ['Inception by Christopher Nolan', 'Avatar by James Cameron', 
+'Star Wars by J.J. Abrams', 'Matrix by Larry Wachowski and Andy Wachowski']
 y = {'Inception': 'Christopher Nolan', 'Avatar': 'James Cameron', 'Star Wars': 'J.J. Abrams', 'Matrix': 'Larry Wachowski and Andy Wachowski'}
 z = set(x)
 
 # Изменение объекта
 
-x[3] = 'Matrix - Lana Wachowski and Lilly Wachowski'
+x[3] = 'Matrix by Lana Wachowski and Lilly Wachowski'
 print(x[3])
 y['Inception'] = 'Nolan'
 print(y['Inception'])
-#z[2] = 'Abrams'
-#print(z[2])
+a = set('Matrix by Larry Wachowski and Andy Wachowski')
+z -= a
+z.add('Matrix by Lana Wachowski and Lilly Wachowski')
+print(z)
 
 # Поиск
 # Список
@@ -29,16 +31,19 @@ for i in y:
     if 'Cameron' in y[i]:
         print(i)
         
-        
+# Множество        
 check = True
 for i in range(len(z)):
-    if 'Inception' in z[i]:
-        print(z[i])
+    if 'Inception by Christopher Nolan' in z:
+        print('Есть такой')
         check = True
         break
     else:
         check = False
 if check == False:
     print('Нет такого')  
+# В целом, любой из этих типов данных подхдоит для хранения информации (возможности внесения изменений и поиск элементов присутствуют в каждом типе)
+#Так как множество перемешивает элементы, то упорядочение, например, по алфавиту 
+# здесь невозможно, также множество удаляет повторные элементы, что, опять же, не удобно.
 
     
